@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-    runs-on: GLMigration
+    runs-on: self-hosted
 
     steps:
       - run: echo "runner works"
