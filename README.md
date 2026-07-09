@@ -70,6 +70,7 @@ https://docs.github.com/en/enterprise-cloud@latest/migrations/ado/managing-acces
 ├── config.sh
 ├── runner.sh
 ├── gl-migration-readiness-check.sh
+├── gl-gitsizer-lfs-readiness-check.sh
 ├── generate-gl-migration-archive.sh
 ├── upload-gl-migration-archive.sh
 ├── start-gl2gh-repo-migration.sh
@@ -105,6 +106,7 @@ https://docs.github.com/en/enterprise-cloud@latest/migrations/ado/managing-acces
 | `config.sh` | Contains shared / generic variables used by multiple scripts. |
 | `runner.sh` | Runner helper / wrapper script used to execute migration operations in the runner environment. |
 | `gl-migration-readiness-check.sh` | Checks active merge requests and running pipelines before migration. |
+| `gl-gitsizer-lfs-readiness-check.sh` | Performs GitSizer analysis to identify repositories and large files. |
 | `generate-gl-migration-archive.sh` | Generates GitLab migration archives / exports for repositories defined in the inventory. |
 | `upload-gl-migration-archive.sh` | Uploads generated archives to the configured intermediate storage. |
 | `start-gl2gh-repo-migration.sh` | Starts GitLab to GitHub repository migration jobs in GitHub. |
@@ -290,7 +292,9 @@ Configure required reviewers in `approvers-group` to enforce manual approvals.
 
 3. Pre-migration readiness check
    - Checks active GitLab merge requests and running pipelines
-   - Uploads readiness output and logs as artifacts
+   - Performs a GitSizer assessment to identify repositories and files that may require review before migration
+   - Uploads readiness and GitSizer reports as workflow artifacts
+   - GitSizer findings should be reviewed and approved before proceeding to the migration stages
 
 4. Manual approval after readiness check
    - Uses `approvers-group`
