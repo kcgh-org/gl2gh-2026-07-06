@@ -1,0 +1,11 @@
+name: runner-test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: GLMigration
+
+    steps:
+      - run: echo "runner works"
