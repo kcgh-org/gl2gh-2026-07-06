@@ -1,3 +1,2 @@
 Namespace,Project,Commit_Count,Branch_Count,Full_URL,github_org,github_repo,gh_repo_visibility
-migration-demo-group,AI-Chatbot,13,2,http://gitlabpoc.eastus.cloudapp.azure.com/migration-demo-group/AI-Chatbot,kcghorgz,AI-Chatbot-09july-1a,private
-migration-demo-group,Music-Player,76,2,http://gitlabpoc.eastus.cloudapp.azure.com/migration-demo-group/music-player,kcghorgz,Music-Player-09july-1a,public
+migration-demo-group,AI-Chatbot,13,2,http://gitlabpoc.eastus.cloudapp.azure.com/migration-demo-group/AI-Chatbot,gl-mig-org,AI-Chatbot-09july-1a,private
