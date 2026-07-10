@@ -552,8 +552,9 @@ Create a separate GitHub Environment for approval workflows.
 Navigate to:
 
 ```text
-GitHub Repository → Settings → Environments → approvers-group
+GitHub Repository → Settings → Environments 
 ```
+Create environemnt called `approvers-group`
 
 This environment is used by workflow approval stages, including:
 
