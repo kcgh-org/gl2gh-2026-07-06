@@ -66,19 +66,19 @@ gh auth login --hostname SUBDOMAIN.ghe.com
 
 Install the following GitHub CLI extensions:
 
-- gh-gitlab-stats: Used to generate GitLab inventory reports.
+- **gh-gitlab-stats:** Used to generate GitLab inventory reports.
 
 ```bash
 gh extension install https://github.com/mona-actions/gh-gitlab-stats
 ```
 
-- gh-migration-monitor: Used to monitor migration status manually.
+- **gh-migration-monitor:** Used to monitor migration status manually.
 
 ```bash
 gh extension install https://github.com/mona-actions/gh-migration-monitor
 ```
 
-- gh-ado2gh: Used for:
+- **gh-ado2gh:** Used for:
 
 - Migration status checks
 - Mannequin CSV generation
