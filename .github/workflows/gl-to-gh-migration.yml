@@ -406,6 +406,29 @@ jobs:
           test -f ./migration_scripts/create-migration-source.js || { echo "[ERROR] migration_scripts/create-migration-source.js not found"; exit 1; }
           test -f ./migration_scripts/start-repo-migration.js || { echo "[ERROR] migration_scripts/start-repo-migration.js not found"; exit 1; }
           test -f ./migration_scripts/gh-api.js || { echo "[ERROR] migration_scripts/gh-api.js not found"; exit 1; }
+
+          # Verify upload scripts are present
+          if [[ "$STORAGE_TYPE" == "GITHUB" ]]; then
+              test -f ./migration_scripts/upload-to-github-blob.sh || {
+                  echo "[ERROR] migration_scripts/upload-to-github-blob.sh not found"
+                  exit 1
+              }
+          fi
+          
+          if [[ "$STORAGE_TYPE" == "AZURE" ]]; then
+              test -f ./migration_scripts/upload-to-azure-blob.sh || {
+                  echo "[ERROR] migration_scripts/upload-to-azure-blob.sh not found"
+                  exit 1
+              }
+          fi
+          
+          if [[ "$STORAGE_TYPE" == "AWS" ]]; then
+              test -f ./migration_scripts/upload-to-aws-blob.sh || {
+                  echo "[ERROR] migration_scripts/upload-to-aws-blob.sh not found"
+                  exit 1
+              }
+          fi
+
           echo "[INFO] Scripts are present"
 
           # Validate Inventory file exists and not empty
