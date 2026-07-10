@@ -45,41 +45,7 @@ Required scopes:
 - `workflow`
 - `user`
 
-### 2.5 Intermediate Storage for Migration Archives
-
-Migration archives are temporarily stored before migration into GitHub.
-
-Supported storage options:
-
-| Storage Type | Supported Capacity |
-|-------------|-------------------|
-| GitHub Storage | Up to 30 GB |
-| Azure Storage | Up to 40 GB |
-| AWS Storage | Up to 40 GB |
-
-Additional requirements:
-
-- Azure CLI is required when using Azure Storage.
-- AWS CLI is required when using AWS Storage.
-
-### 2.6 GitHub Object Storage Feature Flag
-
-The GitHub Object Storage feature flag must be enabled for:
-
-- The GitHub enterprise/account handle.
-- All target GitHub organizations.
-
-### 2.7 Network Configuration
-
-The customer is responsible for configuring any required IP allow lists according to their implementation.
-
-Reference documentation:
-
-```text
-https://docs.github.com/en/enterprise-cloud/latest/migrations/ado/managing-access-for-a-migration-from-azure-devops#configuring-ip-allow-lists-for-migrations
-```
-
-### 2.8 GitHub Authentication (Manual GEI Migration Only)
+### 2.5 GitHub Authentication (Manual GEI Migration Only)
 
 #### GitHub Enterprise Cloud
 
@@ -125,3 +91,38 @@ Used for:
 ```bash
 gh extension install https://github.com/github/gh-ado2gh
 ```
+
+### 2.6 Intermediate Storage for Migration Archives
+
+Migration archives are temporarily stored before migration into GitHub.
+
+Supported storage options:
+
+| Storage Type | Supported Capacity |
+|-------------|-------------------|
+| GitHub Storage | Up to 30 GB |
+| Azure Storage | Up to 40 GB |
+| AWS Storage | Up to 40 GB |
+
+Additional requirements:
+
+- Azure CLI is required when using Azure Storage.
+- AWS CLI is required when using AWS Storage.
+
+### 2.7 GitHub Object Storage Feature Flag
+
+The GitHub Object Storage feature flag must be enabled for:
+
+- The GitHub enterprise/account handle.
+- All target GitHub organizations.
+
+### 2.8 Network Configuration
+
+The customer is responsible for configuring any required IP allow lists according to their implementation.
+
+Reference documentation:
+
+```text
+https://docs.github.com/en/enterprise-cloud/latest/migrations/ado/managing-access-for-a-migration-from-azure-devops#configuring-ip-allow-lists-for-migrations
+```
+
