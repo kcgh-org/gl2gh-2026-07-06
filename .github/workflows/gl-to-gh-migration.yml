@@ -393,6 +393,7 @@ jobs:
           test -f ./runner.sh || { echo "[ERROR] runner.sh not found"; exit 1; }
           test -f ./config.sh || { echo "[ERROR] config.sh not found"; exit 1; }
           test -f ./gl-migration-readiness-check.sh || { echo "[ERROR] gl-migration-readiness-check.sh not found"; exit 1; }
+          test -f ./gl-gitsizer-lfs-readiness-check.sh || { echo "[ERROR] gl-gitsizer-lfs-readiness-check.sh not found"; exit 1; }
           test -f ./generate-gl-migration-archive.sh || { echo "[ERROR] generate-gl-migration-archive.sh not found"; exit 1; }
           test -f ./upload-gl-migration-archive.sh || { echo "[ERROR] upload-gl-migration-archive.sh not found"; exit 1; }
           test -f ./start-gl2gh-repo-migration.sh || { echo "[ERROR] start-gl2gh-repo-migration.sh not found"; exit 1; }
