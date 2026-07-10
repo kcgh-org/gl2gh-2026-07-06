@@ -80,6 +80,16 @@ else
 echo "[INFO] Using Archive file: $ARCHIVE_LIST"
 fi
 
+#### DEBUG
+echo "Current directory"
+pwd
+echo "list all files"
+ls -lRrtha
+echo "Display Upload script"
+ls -lrtha "$UPLOAD_SCRIPT"
+##### DEBUG END
+
+
 if [[ ! -x "$UPLOAD_SCRIPT" ]]; then
 echo "[ERROR] Upload script not found/executable: $UPLOAD_SCRIPT"
 exit 1
