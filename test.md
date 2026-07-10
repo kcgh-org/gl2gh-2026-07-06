@@ -79,11 +79,10 @@ gh extension install https://github.com/mona-actions/gh-migration-monitor
 ```
 
 - **gh-ado2gh:** Used for:
-
-- Migration status checks
-- Mannequin CSV generation
-- Mannequin reclamation
-- Migration monitoring
+  - Migration status checks
+  - Mannequin CSV generation
+  - Mannequin reclamation
+  - Migration monitoring
 
 ```bash
 gh extension install https://github.com/github/gh-ado2gh
