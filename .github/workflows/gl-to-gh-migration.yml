@@ -863,7 +863,8 @@ jobs:
           export AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY:-}"
 
           chmod +x ./upload-gl-migration-archive.sh ./config.sh
-          [[ -x "./upload-gl-migration-archive.sh" ]] || { echo "[ERROR] upload-gl-migration-archive.sh not executable"; exit 1; }
+          bash -x upload-gl-migration-archive.sh
+          #[[ -x "./upload-gl-migration-archive.sh" ]] || { echo "[ERROR] upload-gl-migration-archive.sh not executable"; exit 1; }
 
           ARCHIVE_LIST="$(basename "$ARCHIVE_LIST")"
           export ARCHIVE_LIST="$CI_PROJECT_DIR/output_files/$ARCHIVE_LIST"
