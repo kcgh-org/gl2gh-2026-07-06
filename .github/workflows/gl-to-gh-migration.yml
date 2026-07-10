@@ -863,6 +863,20 @@ jobs:
           export AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY:-}"
 
           chmod +x ./upload-gl-migration-archive.sh ./config.sh
+
+          # Verify upload scripts are present
+          if [[ "$STORAGE_TYPE" == "GITHUB" ]]; then
+              chmod +x migration_scripts/upload-to-github-blob.sh
+          fi
+          
+          if [[ "$STORAGE_TYPE" == "AZURE" ]]; then
+              chmod +x migration_scripts/upload-to-azure-blob.sh
+          fi
+          
+          if [[ "$STORAGE_TYPE" == "AWS" ]]; then
+              chmod +x migration_scripts/upload-to-aws-blob.sh
+          fi
+          
           [[ -x "./upload-gl-migration-archive.sh" ]] || { echo "[ERROR] upload-gl-migration-archive.sh not executable"; exit 1; }
 
           ARCHIVE_LIST="$(basename "$ARCHIVE_LIST")"
