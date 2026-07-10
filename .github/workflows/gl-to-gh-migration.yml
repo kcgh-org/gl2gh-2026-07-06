@@ -502,11 +502,9 @@ jobs:
           chmod +x ./gl-gitsizer-lfs-readiness-check.sh
   
           echo
-          echo "======================================="
           echo "# 1. Migration Readiness Check"
-          echo "======================================="
-          
-          echo "Running migration readiness checks for open merge requests and active pipelines."
+          echo "=============================="
+          echo "Running migration readiness checks for open merge requests and active pipelines..."
           ./gl-migration-readiness-check.sh \
             > gl-migration-readiness-check.out 2>&1 || {
               echo "[ERROR] Migration readiness check failed"
@@ -515,10 +513,9 @@ jobs:
             }
   
           echo
-          echo "======================================="
           echo "# 2. GitSizer Repository Discovery"
-          echo "======================================="
-          echo "Running GitSizer readiness checks for repository size and large file analysis."
+          echo "=================================="
+          echo "Running GitSizer readiness checks for repository size and large file analysis..."
           ./gl-gitsizer-lfs-readiness-check.sh \
             > gl-gitsizer-lfs-readiness-check.out 2>&1 || {
               echo "[ERROR] GitSizer readiness check failed"
