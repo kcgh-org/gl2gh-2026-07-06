@@ -45,7 +45,7 @@ Required scopes:
 - `workflow`
 - `user`
 
-### 2.5 GitHub Authentication (Manual GEI Migration Only)
+### 2.5 GitHub Authentication and CLI installation (Manual GEI Migration Only)
 
 #### GitHub Enterprise Cloud
 
@@ -59,11 +59,11 @@ gh auth login --hostname github.com
 gh auth login --hostname SUBDOMAIN.ghe.com
 ```
 
-### 2.9 Required GitHub CLI Extensions
+#### Required GitHub CLI Extensions
 
 Install the following GitHub CLI extensions:
 
-#### gh-gitlab-stats
+##### gh-gitlab-stats
 
 Used to generate GitLab inventory reports.
 
@@ -71,7 +71,7 @@ Used to generate GitLab inventory reports.
 gh extension install https://github.com/mona-actions/gh-gitlab-stats
 ```
 
-#### gh-migration-monitor
+##### gh-migration-monitor
 
 Used to monitor migration status manually.
 
@@ -79,7 +79,7 @@ Used to monitor migration status manually.
 gh extension install https://github.com/mona-actions/gh-migration-monitor
 ```
 
-#### gh-ado2gh
+##### gh-ado2gh
 
 Used for:
 
